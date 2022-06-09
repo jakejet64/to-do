@@ -26,6 +26,39 @@ body {
     flex-direction: column;
 }
 
+#projectContainer {
+    margin: 0;
+    padding: 0;
+}
+
+.project {
+    border: 1px solid rgb(73, 73, 73);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.project * {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.projectName {
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+.deleteProject {
+    border: none;
+    background-color: rgb(73, 73, 73);
+    color: red;
+    font-weight: 900;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
 .tasks p {
     font-size: 2rem;
 }
@@ -38,6 +71,7 @@ body {
 .addTask {
     border: solid 1px rgb(73, 73, 73);
     border-radius: 10px;
+    display: flex;
 }
 
 .addProject:active,
@@ -45,20 +79,25 @@ body {
     background-color: rgba(73, 73, 73, 0.139);
 }
 
-.form {
+.addProject *,
+.addTask * {
+    display: none;
     margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
 }
 
-.formInput {
-    margin: 0px 5px;
-    padding: 5px 5px;
-    border: solid 1px rgb(68, 170, 68);
-    border-radius: 5px;
-    background-color: rgb(224, 252, 224);
+.addProject *:not(p),
+.addTask *:not(p) {
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 5px 12px;
+    background-color: rgb(228, 228, 228);
+    margin-right: 10px;
+}
+
+.addProject .active,
+.addTask .active {
+    display:flex;
 }
 
 .projects div {
